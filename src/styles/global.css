@@ -1,0 +1,275 @@
+/* ============================================
+   0xguy — Tokyo Night + Tech Orange
+   Matches the Obsidian Publish theme at
+   https://publish.obsidian.md/0xguy/Home
+   ============================================ */
+
+:root {
+  /* Accent */
+  --accent:         #E8734A;
+  --accent-bright:  #F28C5E;
+  --accent-soft:    #D4623D;
+  --accent-dim:     rgba(232, 115, 74, 0.15);
+
+  /* Tokyo Night */
+  --bg:             #1a1b26;
+  --bg-alt:         #16161e;
+  --bg-highlight:   #292e42;
+  --bg-card:        #1f2030;
+  --fg:             #c0caf5;
+  --fg-dim:         #a9b1d6;
+  --comment:        #565f89;
+  --tn-blue:        #7aa2f7;
+  --tn-cyan:        #7dcfff;
+  --tn-magenta:     #bb9af7;
+  --tn-green:       #9ece6a;
+  --tn-yellow:      #e0af68;
+  --tn-red:         #f7768e;
+
+  /* Type */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+  --page-max: 860px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+a:hover {
+  color: var(--accent-bright);
+  border-bottom-color: var(--accent-bright);
+}
+
+.ext-link {
+  color: var(--tn-cyan);
+}
+.ext-link:hover {
+  color: #a9dcff;
+  border-bottom-color: #a9dcff;
+}
+
+strong { color: var(--accent); font-weight: 700; }
+em     { color: var(--accent-bright); }
+
+h1, h2, h3, h4 {
+  color: var(--fg);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 2.5rem 0 1rem;
+}
+h1 { font-size: 2.4rem; }
+h2 { font-size: 1.7rem; margin-top: 3.5rem; border-bottom: 1px solid var(--bg-highlight); padding-bottom: .5rem; }
+h3 { font-size: 1.2rem; color: var(--accent-bright); }
+
+p, ul, ol { margin: 1rem 0; }
+ul, ol { padding-left: 1.3rem; }
+li { margin: .35rem 0; }
+
+code {
+  font-family: var(--font-mono);
+  font-size: .92em;
+  background: var(--bg-highlight);
+  color: var(--tn-cyan);
+  padding: .1em .4em;
+  border-radius: 4px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--bg-highlight);
+  margin: 3rem 0;
+}
+
+/* ---------- Layout ---------- */
+.page {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 3rem 0 2rem;
+}
+.hero .eyebrow {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: .85rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  margin: 0 0 .75rem;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+.hero .tagline {
+  font-size: 1.15rem;
+  color: var(--fg-dim);
+  max-width: 650px;
+  margin: 0 0 1.8rem;
+}
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem 1rem;
+  font-family: var(--font-mono);
+  font-size: .9rem;
+}
+
+/* ---------- Cards / grids ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+}
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-highlight);
+  border-radius: 8px;
+  padding: 1.25rem 1.4rem;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.card:hover {
+  border-color: var(--accent-soft);
+  transform: translateY(-2px);
+}
+.card h3 {
+  margin: 0 0 .5rem;
+  font-size: 1.05rem;
+}
+.card p {
+  margin: 0;
+  color: var(--fg-dim);
+  font-size: .95rem;
+}
+
+/* ---------- Project list (richer than card grid) ---------- */
+.project {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--bg-highlight);
+}
+.project:last-child { border-bottom: 1px solid var(--bg-highlight); }
+.project h3 {
+  margin: 0 0 .25rem;
+  font-size: 1.1rem;
+}
+.project .meta {
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  color: var(--comment);
+  margin-bottom: .35rem;
+}
+
+/* ---------- Stack table ---------- */
+.stack {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: .95rem;
+}
+.stack th, .stack td {
+  text-align: left;
+  padding: .6rem .8rem;
+  border-bottom: 1px solid var(--bg-highlight);
+}
+.stack th {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.stack tr:hover td {
+  background: var(--accent-dim);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--bg-highlight);
+  color: var(--comment);
+  font-size: .88rem;
+  font-family: var(--font-mono);
+}
+footer a { color: var(--fg-dim); }
+footer a:hover { color: var(--accent-bright); }
+
+/* ---------- Site nav ---------- */
+.site-nav {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--bg-highlight);
+  font-family: var(--font-mono);
+  font-size: .92rem;
+}
+.site-nav .brand {
+  color: var(--fg);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border-bottom: none;
+}
+.site-nav .brand:hover { color: var(--accent-bright); }
+.site-nav .brand-prefix { color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem 1.2rem;
+}
+.nav-links a {
+  color: var(--fg-dim);
+  border-bottom: 1px solid transparent;
+  padding: .15rem 0;
+}
+.nav-links a:hover {
+  color: var(--accent-bright);
+  border-bottom-color: var(--accent-bright);
+}
+.nav-links a.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.nav-links .ext-marker {
+  color: var(--comment);
+  font-size: .8em;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 540px) {
+  html, body { font-size: 16px; }
+  .hero h1 { font-size: 2.1rem; }
+  .page { padding: 2rem 1.1rem 3.5rem; }
+  .site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .75rem;
+    padding: 1rem 1.1rem;
+  }
+}

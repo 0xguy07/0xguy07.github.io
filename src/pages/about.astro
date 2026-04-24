@@ -1,0 +1,102 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'About — Guy Friley / 0xguy';
+const description = 'Who Guy is, how he got here, and what he is working on now.';
+---
+<Base title={title} description={description}>
+
+  <section class="hero">
+    <p class="eyebrow">About</p>
+    <h1>Guy Friley</h1>
+    <p class="tagline">
+      Pittsburgh, PA. Technical investigator by day, homelab tinkerer by evening, grad student by weekend.
+    </p>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>What I do</h2>
+    <p>
+      For the past four years I've been a <strong>technical investigator</strong> on an enterprise platform — resolving complex issues across 15+ products, mostly in the nonprofit and education verticals.
+      The work spans Apex source-level debugging, SOQL/Tooling API queries, correlating telemetry in Splunk (corepods, gack traces, memory profiling), and building reproduction harnesses to make intermittent defects reproducible.
+    </p>
+    <p>
+      Over that stretch I've closed <strong>1,687 enterprise cases</strong> with a 4.9/5.0 median CSAT and 0% escalation rate since 2025, opened <strong>106 Structured Investigations</strong> that produced 64 engineering work items (60% escalation-to-code-fix rate), authored 22 Knowledge Articles, filed 7 Known Issues, and led 58 Swarm assists.
+    </p>
+    <p>
+      In 2025 I was recognized as an <em>Agentblazer Champion &amp; Innovator</em> for building AI-powered service agent solutions using Agentforce, Einstein AI, Data Cloud, and Prompt Builder.
+    </p>
+  </section>
+
+  <section>
+    <h2>What I'm working on</h2>
+    <p>
+      I've spent four years at the application layer. I'm now exploring the layers underneath — hypervisors, networks, pipelines, security controls — on my own hardware, in public.
+    </p>
+    <ul>
+      <li>Building out a <strong>homelab</strong> — Proxmox 9.1 + Tailscale + a growing roster of self-hosted services</li>
+      <li>Certification roadmap: <strong>Security+ → Network+ → CCNA</strong>, on top of the TryHackMe Pre Security path</li>
+      <li>Deep-diving Docker, with <strong>Kubernetes</strong> next</li>
+      <li>Finishing a <strong>Master of Science in Data Science</strong> at the University of Pittsburgh (2026)</li>
+      <li>Writing everything up at <a href="https://publish.obsidian.md/0xguy/Home" class="ext-link">publish.obsidian.md/0xguy</a></li>
+    </ul>
+    <p>
+      I'm genuinely uncertain where this lands. Could be platform engineering, could be SRE, could be something cloud/architecture-adjacent I haven't fully scoped. The skills compound either way.
+    </p>
+  </section>
+
+  <section>
+    <h2>How I got here</h2>
+    <p>
+      Not a linear path.
+    </p>
+    <ul>
+      <li><strong>2015–2019</strong> — Home Theater Specialist at Best Buy. Learned to explain technical things to non-technical humans, train junior staff, and survive a retail floor.</li>
+      <li><strong>2019</strong> — Salesforce Business Analyst (contract) at World-Class Industrial Network. First exposure to Salesforce.</li>
+      <li><strong>2019–2020</strong> — IT Infrastructure Rep at Highmark Health, supporting Allegheny Health Network hospital staff. First real enterprise IT; first Sev 1 response.</li>
+      <li><strong>2020–2021</strong> — Salesforce Developer / Admin at Virtual Clarity (DXC). Built the firm's first automated Azure AD → Salesforce provisioning pipeline.</li>
+      <li><strong>2021–present</strong> — Technical investigator role. Current chapter.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What I like working on</h2>
+    <ul>
+      <li><strong>Finding root causes.</strong> The gap between <em>"it works again"</em> and <em>"here's exactly why it broke"</em> is the gap between patching and engineering.</li>
+      <li><strong>Making systems legible.</strong> Good documentation, clear diagrams, and honest postmortems are undervalued.</li>
+      <li><strong>Shipping small, finished things.</strong> Finished beats ambitious-but-half-built every time.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Beyond work</h2>
+    <ul>
+      <li>Homelab tinkering — see the <a href="https://publish.obsidian.md/0xguy/Homelab" class="ext-link">notebook</a></li>
+      <li>Dungeons &amp; Dragons, mostly as DM</li>
+      <li>Reading, mix of technical and fiction</li>
+      <li>Arduino &amp; low-level electronics</li>
+      <li>Volunteer Salesforce consulting for nonprofits through Impact Exchange — currently supporting a Nonprofit Cloud implementation alongside a Success Architect</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Find me</h2>
+    <ul>
+      <li><a href="https://publish.obsidian.md/0xguy/Home" class="ext-link">publish.obsidian.md/0xguy</a> — the open notebook</li>
+      <li><a href="https://github.com/0xguy07" class="ext-link">github.com/0xguy07</a></li>
+      <li><a href="https://www.linkedin.com/in/gfriley/" class="ext-link">linkedin.com/in/gfriley</a></li>
+      <li><a href="https://www.salesforce.com/trailblazer/gfriley2" class="ext-link">Trailhead — @gfriley2</a></li>
+      <li><a href="mailto:gfriley07@gmail.com" class="ext-link">gfriley07@gmail.com</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>
+      Built with <a href="https://astro.build" class="ext-link">Astro</a>. Source on
+      <a href="https://github.com/0xguy07/0xguy07.github.io" class="ext-link">GitHub</a>.
+    </p>
+  </footer>
+
+</Base>

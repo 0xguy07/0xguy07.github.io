@@ -1,0 +1,185 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Guy Friley — 0xguy';
+const description = 'Technical investigator with a homelab habit. Four years at the application layer, now exploring what\'s underneath. Learning in public.';
+---
+<Base title={title} description={description}>
+
+  <!-- Hero -->
+  <section class="hero">
+    <p class="eyebrow">0xguy · Pittsburgh, PA</p>
+    <h1>Guy Friley</h1>
+    <p class="tagline">
+      Technical investigator with a <strong>homelab habit</strong>. Four years debugging enterprise platform problems at the application layer — now exploring the layers underneath.
+      Learning in public through a homelab, <a href="https://tryhackme.com" class="ext-link">TryHackMe</a>, and a Master's in Data Science at Pitt. Still figuring out where the next role lands — <em>SRE, DevOps, platform, or somewhere adjacent</em>.
+    </p>
+    <nav class="hero-links">
+      <a href="https://www.linkedin.com/in/gfriley/" class="ext-link">linkedin →</a>
+      <a href="https://www.salesforce.com/trailblazer/gfriley2" class="ext-link">trailblazer →</a>
+      <a href="mailto:gfriley07@gmail.com" class="ext-link">email →</a>
+    </nav>
+  </section>
+
+  <hr />
+
+  <!-- Origin story -->
+  <section>
+    <h2>One evening in April</h2>
+    <p>
+      On <strong>April 9, 2026</strong>, I set out to capture a WPA2 handshake on my own WiFi using a Flipper Zero.
+      By the end of that same evening, I'd converted a dormant gaming PC into a <strong>Proxmox hypervisor</strong>,
+      hardened it with SSH key auth and Fail2Ban, and joined it to a <strong>Tailscale mesh</strong> spanning five devices.
+      What started as a packet-capture exercise became the foundation of a full homelab — built entirely from hardware I already owned.
+    </p>
+    <p>
+      That compression of <em>curiosity into infrastructure</em>, in a single session, is the thesis of this project:
+      hands-on learning is how I'm figuring out what comes next.
+    </p>
+  </section>
+
+  <!-- Now -->
+  <section>
+    <h2>Now</h2>
+    <ul>
+      <li>Building out the homelab — Proxmox 9.1 + Tailscale + a growing roster of self-hosted services</li>
+      <li>Cert roadmap: <strong>CompTIA Security+</strong> → <strong>Network+</strong> → <strong>CCNA</strong>, stacking on top of the <a href="https://tryhackme.com" class="ext-link">TryHackMe</a> Pre Security path I just finished</li>
+      <li>Deep-diving <strong>Docker</strong> and container fundamentals — with <strong>Kubernetes</strong> next</li>
+      <li>Pursuing a <strong>Master of Science in Data Science</strong> at the University of Pittsburgh (2026)</li>
+    </ul>
+  </section>
+
+  <!-- Learning grid -->
+  <section>
+    <h2>What I'm learning</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Infrastructure &amp; virtualization</h3>
+        <p>Proxmox VE on a Ryzen 7 / 32GB host. Learning when LXC, Docker, and full KVM VMs are each the right tool — and planning GPU passthrough for hashcat workloads (IOMMU, VFIO).</p>
+      </div>
+      <div class="card">
+        <h3>Linux systems admin</h3>
+        <p>Every Security+ concept touched on the real system: SSH hardening, Fail2Ban, <code>ufw</code>, layered firewalls. Learned the hard way that key auth goes <em>before</em> disabling passwords. <a href="https://publish.obsidian.md/0xguy/Homelab/System+Hardening" class="ext-link">Writeup →</a></p>
+      </div>
+      <div class="card">
+        <h3>Networking</h3>
+        <p>Subnetting and CIDR stopped being abstract the moment I had to assign IPs to containers. Tailscale (WireGuard overlay) replaced the idea of a traditional jump host entirely.</p>
+      </div>
+      <div class="card">
+        <h3>Security &amp; offensive tooling</h3>
+        <p>Flipper Zero → EAPOL capture → <code>hcxpcapngtool</code> → hashcat. Next: Alfa AWUS036ACH for monitor mode, a Pi-hosted honeypot, and a persistent Kali lab for TryHackMe.</p>
+      </div>
+      <div class="card">
+        <h3>Self-hosting as skill-building</h3>
+        <p>Every planned service maps to a concept I want to own: Pi-hole (DNS), Wazuh (SIEM), Gitea (VCS), Nextcloud (storage), Grafana + Prometheus (observability).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <h2>Selected projects</h2>
+
+    <div class="project">
+      <h3>Homelab</h3>
+      <p class="meta">ongoing · proxmox · tailscale · self-hosting</p>
+      <p>
+        Full build-out from a dormant PC and spare hardware: virtualization layer, network segmentation, observability, security.
+        Diagrams, configs, and writeups live in the <a href="https://publish.obsidian.md/0xguy/Homelab" class="ext-link">Homelab section of my notebook</a>.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Raspberry Pi 5 hardening</h3>
+      <p class="meta">writeup · linux · security</p>
+      <p>
+        Walk-through of hardening a fresh Pi 5: user hygiene, SSH key auth, Fail2Ban, firewall rules.
+        <a href="https://publish.obsidian.md/0xguy/Homelab/Hardening+a+Raspberry+Pi" class="ext-link">Read the writeup →</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Flipper Zero × Security+ Learning Path</h3>
+      <p class="meta">writeup · security+ · hardware</p>
+      <p>
+        A 7-phase, 14-week curriculum mapping Flipper Zero labs to CompTIA Security+ SY0-701 domains. Turns a pocket device into a study aid.
+        <a href="https://publish.obsidian.md/0xguy/Cybersecurity/Flipper+Zero+and+Security%2B+Learning+Path" class="ext-link">Read the writeup →</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>dm_toolkit &amp; dm_toolkit_extension</h3>
+      <p class="meta">d&amp;d · full-stack · browser extension</p>
+      <p>
+        A Dungeon Master toolkit with a companion browser extension. Hobby-driven, but an excellent excuse to practice shipping end-to-end.
+        <a href="https://github.com/0xguy07/dm_toolkit" class="ext-link">dm_toolkit</a> ·
+        <a href="https://github.com/0xguy07/dm_toolkit_extension" class="ext-link">extension</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>guessing-game</h3>
+      <p class="meta">python · learning-in-public</p>
+      <p>
+        My "escape from tutorial hell" project — small, finished, iterated on.
+        <a href="https://publish.obsidian.md/0xguy/Programming/Programming+-+Create+a+Guessing+Game+with+Python" class="ext-link">writeup</a> ·
+        <a href="https://github.com/0xguy07/guessing-game" class="ext-link">github</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Stack -->
+  <section>
+    <h2>Stack</h2>
+    <table class="stack">
+      <thead>
+        <tr><th>Layer</th><th>Tooling</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Hypervisor</td><td>Proxmox VE 9.1</td></tr>
+        <tr><td>Containers</td><td>LXC, Docker</td></tr>
+        <tr><td>Orchestration</td><td>Kubernetes <em>(in progress)</em></td></tr>
+        <tr><td>VMs</td><td>KVM</td></tr>
+        <tr><td>Remote access</td><td>Tailscale (WireGuard)</td></tr>
+        <tr><td>DNS</td><td>Pi-hole <em>(planned)</em></td></tr>
+        <tr><td>Reverse proxy</td><td>Nginx Proxy Manager <em>(planned)</em></td></tr>
+        <tr><td>Observability</td><td>Uptime Kuma, Grafana + Prometheus <em>(planned)</em></td></tr>
+        <tr><td>SIEM</td><td>Wazuh <em>(planned)</em></td></tr>
+        <tr><td>VCS</td><td>Gitea <em>(planned)</em></td></tr>
+        <tr><td>CI/CD</td><td>GitHub Actions</td></tr>
+        <tr><td>Automation</td><td>n8n <em>(planned)</em></td></tr>
+        <tr><td>Languages</td><td>Python, Bash, JavaScript, SQL</td></tr>
+        <tr><td>Cloud</td><td>AWS Solutions Architect – Associate · Microsoft AZ-900, MS-900, SC-900</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Why -->
+  <section>
+    <h2>Why this matters</h2>
+    <p>
+      I've spent four years investigating complex platform problems at the application layer — often down to source-level debugging and custom reproduction harnesses.
+      The homelab is where I'm exploring the layers underneath. Every service I deploy, every script I write, every incident I debug is portfolio material for whatever the next engineering role turns out to be.
+    </p>
+    <p>
+      The narrative I want hiring managers to see isn't <em>"I read about Kubernetes."</em> It's: <strong>here's the cluster I ran at home, here's what broke, here's how I fixed it.</strong>
+    </p>
+  </section>
+
+  <!-- Community -->
+  <section>
+    <h2>Community</h2>
+    <p>
+      I volunteer Salesforce consulting for nonprofits through Impact Exchange, currently supporting a Nonprofit Cloud implementation alongside a Success Architect.
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      Built with <a href="https://astro.build" class="ext-link">Astro</a>. Source on
+      <a href="https://github.com/0xguy07/0xguy07.github.io" class="ext-link">GitHub</a>.
+      Companion notebook: <a href="https://publish.obsidian.md/0xguy/Home" class="ext-link">publish.obsidian.md/0xguy</a>.
+    </p>
+  </footer>
+
+</Base>

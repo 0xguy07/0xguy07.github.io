@@ -1,0 +1,115 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Uses — Guy Friley / 0xguy';
+const description = 'Hardware, software, and tooling Guy actually uses day-to-day.';
+---
+<Base title={title} description={description}>
+
+  <section class="hero">
+    <p class="eyebrow">Uses</p>
+    <h1>What I use</h1>
+    <p class="tagline">
+      Hardware, software, and tooling I actually reach for day-to-day. Inspired by the <a href="https://uses.tech" class="ext-link">uses.tech</a> tradition.
+    </p>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>Editors</h2>
+    <ul>
+      <li><strong>Zed</strong> — daily driver for code. Fast, focused, opinionated.</li>
+      <li><strong>VS Code</strong> — when I need a richer extension ecosystem (debuggers, remote containers, Salesforce DX).</li>
+      <li><strong>Sublime Text</strong> — quick-edit tool for single files.</li>
+      <li><strong>Obsidian</strong> — every note, every long-form draft. Markdown-first, graph view, custom Tokyo Night theme.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Terminal &amp; shell</h2>
+    <ul>
+      <li><strong>macOS Terminal</strong> with <code>zsh</code> (default)</li>
+      <li><strong>Claude Code</strong> — Anthropic's CLI; pair-programming assistant, including for building this site</li>
+      <li><strong>gh</strong> — GitHub CLI for PRs, issues, quick API calls</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Workstation</h2>
+    <ul>
+      <li><strong>MacBook</strong> (darwin 23.3) — primary machine</li>
+      <li><strong>Samsung Odyssey G7</strong> — primary display</li>
+      <li><strong>Sceptre</strong> — side monitor</li>
+      <li><strong>Logitech mechanical keyboard</strong></li>
+      <li><strong>Logitech mouse</strong></li>
+      <li><strong>Linux reference guide mouse mat</strong> — because why look up <code>grep</code> flags twice</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Homelab</h2>
+    <ul>
+      <li><strong>Hypervisor host</strong> — Ryzen 7 3700X · 32GB RAM · RTX 2060 SUPER, running Proxmox VE 9.1</li>
+      <li><strong>Raspberry Pi 5</strong> — general-purpose ARM node for experiments and services</li>
+      <li><strong>Flipper Zero</strong> — RF, NFC, BLE, WiFi (EAPOL capture), IR tinkering</li>
+      <li><strong>Arduino</strong> — assorted microcontroller projects</li>
+      <li><strong>Gateway</strong> — Verizon G3100 <em>(swap planned)</em></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Networking &amp; remote access</h2>
+    <ul>
+      <li><strong>Tailscale</strong> — WireGuard mesh across every device and the lab. Replaces the idea of a traditional jump host entirely.</li>
+      <li><strong>SSH key auth only</strong>, with <code>PermitRootLogin prohibit-password</code> and Fail2Ban watching the logs.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Languages &amp; ecosystems</h2>
+    <ul>
+      <li><strong>Python</strong> — primary general-purpose language (Pandas, NumPy, Jupyter for the Data Science MS)</li>
+      <li><strong>Bash / zsh</strong> — plumbing</li>
+      <li><strong>SQL / SOQL</strong> — daily at work; also MySQL and Neo4j in grad school</li>
+      <li><strong>JavaScript / Node.js</strong> — for browser extensions and small web apps</li>
+      <li><strong>PowerShell</strong> — legacy from earlier IT work</li>
+      <li><strong>R</strong> — occasional, mostly for stats coursework</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Cloud &amp; infra</h2>
+    <ul>
+      <li><strong>AWS</strong> — Solutions Architect – Associate; exploring</li>
+      <li><strong>Microsoft</strong> — Azure Fundamentals (AZ-900), Microsoft 365 (MS-900), Security/Compliance/Identity (SC-900)</li>
+      <li><strong>Docker</strong> — daily in the lab</li>
+      <li><strong>Kubernetes</strong> — <em>in progress</em></li>
+      <li><strong>GitHub Actions</strong> — CI/CD, including the build that deploys this site</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Observability &amp; debugging</h2>
+    <ul>
+      <li><strong>Splunk</strong> — at work, for telemetry correlation (corepods, gack traces, memory profiling)</li>
+      <li><strong>Grafana + Prometheus</strong> — <em>planned</em> for the homelab</li>
+      <li><strong>Uptime Kuma</strong> — <em>planned</em></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Notes &amp; knowledge</h2>
+    <ul>
+      <li><strong>Obsidian</strong> — vault for everything. Three main vaults: Common (personal), Technical (private technical), and the Publish vault for the public notebook.</li>
+      <li><strong>Obsidian Publish</strong> — <a href="https://publish.obsidian.md/0xguy/Home" class="ext-link">publish.obsidian.md/0xguy</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>
+      Last updated April 2026. The honest version of this list is always a little out of date — <a href="mailto:gfriley07@gmail.com" class="ext-link">tell me what's missing</a>.
+    </p>
+  </footer>
+
+</Base>

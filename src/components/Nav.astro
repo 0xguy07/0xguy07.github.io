@@ -1,0 +1,30 @@
+---
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const links = [
+  { href: '/',        label: 'home',     external: false },
+  { href: '/about',   label: 'about',    external: false },
+  { href: '/projects',label: 'projects', external: false },
+  { href: '/uses',    label: 'uses',     external: false },
+  { href: 'https://publish.obsidian.md/0xguy/Home', label: 'notebook', external: true },
+  { href: 'https://github.com/0xguy07',             label: 'github',   external: true },
+];
+
+const isActive = (href: string) => !href.startsWith('http') && (href === '/' ? pathname === '/' : pathname === href);
+---
+<nav class="site-nav" aria-label="Primary">
+  <a href="/" class="brand" aria-label="0xguy home">
+    <span class="brand-prefix">0x</span>guy
+  </a>
+  <div class="nav-links">
+    {links.map((link) => (
+      <a
+        href={link.href}
+        class={`${link.external ? 'ext-link' : ''} ${isActive(link.href) ? 'active' : ''}`}
+        {...link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {}}
+      >
+        {link.label}{link.external && <span class="ext-marker"> ↗</span>}
+      </a>
+    ))}
+  </div>
+</nav>

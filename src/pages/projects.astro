@@ -1,0 +1,137 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Projects — Guy Friley / 0xguy';
+const description = 'All my public projects — what I am currently building, what I am learning on, and what is archived.';
+---
+<Base title={title} description={description}>
+
+  <section class="hero">
+    <p class="eyebrow">Projects</p>
+    <h1>What I'm building</h1>
+    <p class="tagline">
+      A directory of public repos. Detailed writeups for most of these live on the <a href="https://publish.obsidian.md/0xguy/Home" class="ext-link">notebook</a>.
+    </p>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>Currently building</h2>
+
+    <div class="project">
+      <h3>Homelab</h3>
+      <p class="meta">proxmox · tailscale · self-hosting · security</p>
+      <p>
+        Full build-out from a dormant PC and spare hardware: virtualization layer, network segmentation, observability, security hardening.
+        Diagrams, configs, and postmortems live in the <a href="https://publish.obsidian.md/0xguy/Homelab" class="ext-link">Homelab section of the notebook</a>.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>dm_toolkit &amp; dm_toolkit_extension</h3>
+      <p class="meta">d&amp;d · full-stack · browser extension</p>
+      <p>
+        A Dungeon Master toolkit with a companion browser extension. Hobby-driven, but an excellent excuse to practice shipping end-to-end — extension APIs, packaging, state management.
+        <a href="https://github.com/0xguy07/dm_toolkit" class="ext-link">dm_toolkit</a> ·
+        <a href="https://github.com/0xguy07/dm_toolkit_extension" class="ext-link">extension</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>This site (0xguy07.github.io)</h3>
+      <p class="meta">astro · github pages · tokyo night</p>
+      <p>
+        Hand-rolled Astro site with a Tokyo Night + Tech Orange theme that matches the <code>publish.css</code> on the Obsidian notebook. Deployed via GitHub Actions.
+        <a href="https://github.com/0xguy07/0xguy07.github.io" class="ext-link">github →</a>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Writeups</h2>
+
+    <div class="project">
+      <h3>System Hardening</h3>
+      <p class="meta">linux · ssh · ufw · fail2ban</p>
+      <p>
+        Locking down any Debian-based system — SSH daemon config, UFW firewall rules, Fail2Ban, automatic updates, service auditing. The playbook I run on every new lab host.
+        <a href="https://publish.obsidian.md/0xguy/Homelab/System+Hardening" class="ext-link">Read →</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>SSH Key-Based Authentication</h3>
+      <p class="meta">linux · ssh · cryptography</p>
+      <p>
+        How Ed25519 key pairs replace password login, the full generate → copy → verify workflow, and why Ed25519 beats RSA everywhere except legacy compatibility.
+        <a href="https://publish.obsidian.md/0xguy/Linux/SSH+Key-Based+Authentication" class="ext-link">Read →</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Raspberry Pi 5 hardening</h3>
+      <p class="meta">linux · raspberry pi · security</p>
+      <p>
+        Step-by-step walk-through of hardening a fresh Pi 5: user hygiene, SSH key auth, Fail2Ban, firewall rules. The applied version of <em>System Hardening</em>.
+        <a href="https://publish.obsidian.md/0xguy/Homelab/Hardening+a+Raspberry+Pi" class="ext-link">Read →</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>Flipper Zero × Security+ Learning Path</h3>
+      <p class="meta">security+ · hardware · hands-on</p>
+      <p>
+        A 7-phase, 14-week curriculum mapping Flipper Zero labs (IR, RFID/NFC, Sub-GHz, WiFi with the ESP32 Marauder, BadUSB) to CompTIA Security+ SY0-701 exam domains. Turns a pocket device into a study aid.
+        <a href="https://publish.obsidian.md/0xguy/Cybersecurity/Flipper+Zero+and+Security%2B+Learning+Path" class="ext-link">Read →</a>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Learning projects</h2>
+
+    <div class="project">
+      <h3>Zero to Mastery Python 2026</h3>
+      <p class="meta">python · coursework</p>
+      <p>
+        Coursework repository for the Zero to Mastery Python curriculum — the scaffolding for everything else I build in Python.
+        <a href="https://github.com/0xguy07/Zero_to_Mastery_Python_2026" class="ext-link">github →</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>guessing-game</h3>
+      <p class="meta">python · learning-in-public</p>
+      <p>
+        My "escape from tutorial hell" project — small, finished, iterated on. Taught me how to catch <code>ValueError</code> properly and why input-range validation matters.
+        <a href="https://publish.obsidian.md/0xguy/Programming/Programming+-+Create+a+Guessing+Game+with+Python" class="ext-link">writeup</a> ·
+        <a href="https://github.com/0xguy07/guessing-game" class="ext-link">github</a>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Archive</h2>
+    <p>
+      Older learning repos from 2019–2021. Kept public for history — Terraform exploration, Python bootcamp exercises, PowerShell codewars, intro CS work.
+    </p>
+    <ul>
+      <li><a href="https://github.com/0xguy07/learn-terraform" class="ext-link">learn-terraform</a></li>
+      <li><a href="https://github.com/0xguy07/learning-terraform-up-and-running" class="ext-link">learning-terraform-up-and-running</a></li>
+      <li><a href="https://github.com/0xguy07/learning-terraform-mtc" class="ext-link">learning-terraform-mtc</a></li>
+      <li><a href="https://github.com/0xguy07/learning-python" class="ext-link">learning-python</a></li>
+      <li><a href="https://github.com/0xguy07/learning-crash-course-on-python" class="ext-link">learning-crash-course-on-python</a></li>
+      <li><a href="https://github.com/0xguy07/codewars-powershell" class="ext-link">codewars-powershell</a></li>
+      <li><a href="https://github.com/0xguy07/list_append" class="ext-link">list_append</a></li>
+      <li><a href="https://github.com/0xguy07/parisi_cafe" class="ext-link">parisi_cafe</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>
+      Full repo list: <a href="https://github.com/0xguy07?tab=repositories" class="ext-link">github.com/0xguy07</a>.
+    </p>
+  </footer>
+
+</Base>
