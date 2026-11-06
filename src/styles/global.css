@@ -19,6 +19,7 @@
   --fg:             #c0caf5;
   --fg-dim:         #a9b1d6;
   --comment:        #565f89;
+  --text-muted:     #8089b3;   /* AA-contrast muted text (comment is decorative only) */
   --tn-blue:        #7aa2f7;
   --tn-cyan:        #7dcfff;
   --tn-magenta:     #bb9af7;
@@ -176,7 +177,7 @@ hr {
 .project .meta {
   font-family: var(--font-mono);
   font-size: .82rem;
-  color: var(--comment);
+  color: var(--text-muted);
   margin-bottom: .35rem;
 }
 
@@ -209,7 +210,7 @@ footer {
   margin-top: 5rem;
   padding-top: 2rem;
   border-top: 1px solid var(--bg-highlight);
-  color: var(--comment);
+  color: var(--text-muted);
   font-size: .88rem;
   font-family: var(--font-mono);
 }
@@ -271,5 +272,33 @@ footer a:hover { color: var(--accent-bright); }
     align-items: flex-start;
     gap: .75rem;
     padding: 1rem 1.1rem;
+  }
+}
+
+/* ---------- Accessibility ---------- */
+.skip-link {
+  position: absolute;
+  left: .75rem;
+  top: -4rem;
+  z-index: 100;
+  padding: .5rem .9rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  border-radius: 4px;
+  text-decoration: none;
+}
+.skip-link:focus { top: .75rem; }
+
+:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
   }
 }
