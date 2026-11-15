@@ -1,25 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import ProfileCard from '../components/ProfileCard.astro';
 
 const title = 'Guy Friley — 0xguy';
 const description = 'Technical investigator with a homelab habit. Four years at the application layer, now exploring what\'s underneath. Learning in public.';
 ---
 <Base title={title} description={description}>
 
-  <!-- Hero -->
-  <section class="hero">
-    <p class="eyebrow">0xguy · Pittsburgh, PA</p>
-    <h1>Guy Friley</h1>
-    <p class="tagline">
-      Technical investigator with a <strong>homelab habit</strong>. Four years debugging enterprise platform problems at the application layer — now exploring the layers underneath.
-      Learning in public through a homelab, <a href="https://tryhackme.com" class="ext-link">TryHackMe</a>, and a Master's in Data Science at Pitt. Still figuring out where the next role lands — <em>SRE, DevOps, platform, or somewhere adjacent</em>.
-    </p>
-    <nav class="hero-links">
-      <a href="https://www.linkedin.com/in/gfriley/" class="ext-link">linkedin →</a>
-      <a href="https://www.salesforce.com/trailblazer/gfriley2" class="ext-link">trailblazer →</a>
-      <a href="mailto:gfriley07@gmail.com" class="ext-link">email →</a>
-    </nav>
-  </section>
+  <ProfileCard />
 
   <hr />
 

@@ -1,0 +1,100 @@
+---
+const projects = [
+  { name: 'sf-tui', type: 'Developer tooling', description: 'A keyboard-driven Salesforce workbench built with Go and Bubble Tea.', repo: 'sf-tui' },
+  { name: 'dm_toolkit', type: 'Dungeon Master gear', description: 'Tools for running adventures and keeping a campaign moving.', repo: 'dm_toolkit' },
+  { name: 'dm_toolkit_extension', type: 'Companion equipment', description: 'A browser extension for the Dungeon Master toolkit.', repo: 'dm_toolkit_extension' },
+];
+---
+
+<section class="profile-card" aria-labelledby="profile-name">
+  <header class="profile-header">
+    <p class="eyebrow">Field guide · Pittsburgh, PA · No. 0x07</p>
+    <div class="name-row">
+      <div>
+        <h1 id="profile-name">Guy Friley</h1>
+        <p class="classification">Human investigator · Homelab artificer · Dungeon Master</p>
+      </div>
+      <span class="sigil" aria-hidden="true">d20</span>
+    </div>
+    <p class="headline">I investigate complex Salesforce platform problems and turn technical mysteries into clear explanations. Beyond the application layer, I build a homelab, explore infrastructure, and learn in public.</p>
+  </header>
+
+  <dl class="attributes">
+    <div><dt>Class</dt><dd>Technical investigator</dd></div>
+    <div><dt>Habitat</dt><dd>Pittsburgh, Pennsylvania</dd></div>
+    <div><dt>Specialty</dt><dd>Root-cause investigation</dd></div>
+  </dl>
+
+  <div class="profile-body">
+    <div class="traits">
+      <h2>Proficiencies &amp; equipment</h2>
+      <dl class="trait-list">
+        <div><dt>Credentials.</dt><dd>AWS Solutions Architect – Associate; Microsoft AZ-900, MS-900, and SC-900.</dd></div>
+        <div><dt>Ongoing study.</dt><dd>Master of Science in Data Science, University of Pittsburgh.</dd></div>
+        <div><dt>Tool kit.</dt><dd>Apex, SOQL, Go, Python, Docker, Proxmox, and Tailscale.</dd></div>
+        <div><dt>Off-duty pursuits.</dt><dd>Dungeons &amp; Dragons, homelab tinkering, reading, Arduino, and electronics.</dd></div>
+      </dl>
+    </div>
+
+    <div class="lore">
+      <h2>Background &amp; lore</h2>
+      <p class="bio">My professional background spans enterprise IT, Salesforce development and administration, and technical investigation. I work through complex platform issues with source-level debugging, telemetry, and reproduction harnesses. I am pursuing a master’s degree in data science at the University of Pittsburgh while expanding my infrastructure skills through a hands-on homelab. Away from work, I run Dungeons &amp; Dragons adventures, read technical books and fiction, and experiment with Arduino and electronics. I also volunteer Salesforce consulting for nonprofits through Impact Exchange.</p>
+    </div>
+  </div>
+
+  <div class="quests">
+    <div class="section-heading"><h2>Projects &amp; side quests</h2><span>Explore the repositories ↗</span></div>
+    <ul class="quest-list">
+      {projects.map(project => (
+        <li><a href={`https://github.com/0xguy07/${project.repo}`}>
+          <span class="quest-type">{project.type}</span>
+          <span class="quest-name">{project.name} <span aria-hidden="true">↗</span></span>
+          <span class="quest-description">{project.description}</span>
+        </a></li>
+      ))}
+    </ul>
+  </div>
+
+  <nav class="profile-links" aria-label="Professional profiles">
+    <a href="https://github.com/0xguy07">GitHub ↗</a>
+    <a href="https://www.linkedin.com/in/gfriley/">LinkedIn ↗</a>
+    <a href="https://www.salesforce.com/trailblazer/gfriley2">Trailblazer ↗</a>
+    <a href="mailto:gfriley07@gmail.com">Email ↗</a>
+  </nav>
+</section>
+
+<style>
+  .profile-card { background: var(--bg-highlight); border: 1px solid var(--accent-soft); border-top: 5px solid var(--accent); border-bottom: 5px solid var(--accent); padding: clamp(1.2rem, 4vw, 2.4rem); margin: 1.5rem 0 3rem; box-shadow: 0 16px 45px #0003; position: relative; }
+  .eyebrow, .attributes dt, .quest-type, .section-heading > span, .profile-links { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .06em; }
+  .eyebrow { color: var(--accent-bright); text-transform: uppercase; margin: 0 0 1rem; }
+  .name-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.5rem, 7vw, 3.6rem); color: var(--accent-bright); margin: 0; font-variant: small-caps; }
+  .classification { font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: var(--fg-dim); margin: .25rem 0 0; }
+  .sigil { display: grid; place-items: center; flex-shrink: 0; width: 4.2rem; height: 4.7rem; background: var(--accent); color: var(--bg-alt); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); font: bold 1.25rem Georgia, serif; }
+  .headline { font-size: 1.05rem; margin: 1.3rem 0; }
+  .attributes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; border-block: 2px solid var(--accent-soft); margin: 1.5rem 0; padding: 1rem 0; }
+  .attributes dt { color: var(--accent-bright); text-transform: uppercase; }
+  dd { margin: .25rem 0 0; }
+  .attributes dd { font-size: .85rem; }
+  h2 { font: small-caps 1.4rem Georgia, 'Times New Roman', serif; color: var(--accent-bright); margin: 0 0 .8rem; border: 0; padding: 0; }
+  .profile-body { display: grid; grid-template-columns: 1fr 1.15fr; gap: 2rem; }
+  .trait-list { margin: 0; }
+  .trait-list div { margin-bottom: .7rem; }
+  .trait-list dt { display: inline; font-weight: bold; color: var(--fg); }
+  .trait-list dd { display: inline; margin-left: .3rem; }
+  .trait-list, .bio { font-size: .9rem; color: var(--fg-dim); }
+  .bio { margin: 0; }
+  .quests { border-top: 2px solid var(--accent-soft); margin-top: 1.5rem; padding-top: 1.25rem; }
+  .section-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem 1rem; }
+  .section-heading > span { color: var(--fg-dim); }
+  .quest-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; margin: .6rem 0 0; }
+  .quest-list li { margin: 0; min-width: 0; }
+  .quest-list a { display: flex; flex-direction: column; height: 100%; padding: 1rem; background: var(--bg-card); border: 1px solid var(--comment); border-radius: 2px; }
+  .quest-list a:hover { border-color: var(--accent-bright); background: var(--bg-alt); }
+  .quest-type { color: var(--fg-dim); font-size: .65rem; }
+  .quest-name { color: var(--tn-cyan); font-size: .93rem; font-weight: bold; overflow-wrap: anywhere; margin: .3rem 0; }
+  .quest-description { font-size: .8rem; color: var(--fg-dim); }
+  .profile-links { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; padding-top: 1.2rem; }
+  .profile-links a { color: var(--tn-cyan); }
+  @media (max-width: 650px) { .profile-body { grid-template-columns: 1fr; gap: 1.25rem; } .quest-list { grid-template-columns: 1fr; } .attributes { grid-template-columns: 1fr; gap: .6rem; } .attributes div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 .6rem; } .sigil { width: 3rem; height: 3.5rem; } }
+</style>
