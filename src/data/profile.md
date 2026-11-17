@@ -79,13 +79,32 @@ Field of study: Web Page, Digital/Multimedia and Information Resources Design. F
 
 ### Certifications & continuing education
 
-**Credentials:**
+**Salesforce certifications:**
+
+| Certification | Issued | Status |
+| --- | --- | --- |
+| Salesforce Certified Business Analyst | March 2023 | Maintenance due August 20, 2027 |
+| Salesforce Certified Platform App Builder | November 2021 | Active |
+| Salesforce Certified Platform Foundations | March 2023 | Active |
+
+**Previously earned Salesforce credentials:** Platform Administrator and Education Cloud Consultant (both expired April 2026; renewal needed), and AI Associate (earned May 2024; credential retired February 2026).
+
+**Salesforce superbadges:**
+
+- Agentforce Service — completed October 14, 2025
+- Prompt Builder Templates — completed August 23, 2025
+- Business Administration Specialist — completed October 29, 2022
+
+**Agentblazer recognition:** Champion 2026; Champion and Innovator 2025.
+
+Salesforce credential statuses are based on my Trailblazer certification record, as reviewed November 16, 2026. [Trailblazer profile →](https://www.salesforce.com/trailblazer/gfriley2)
+
+**Additional credentials:**
 
 - AWS Certified Solutions Architect – Associate
 - Microsoft Azure Fundamentals — AZ-900
 - Microsoft 365 Fundamentals — MS-900
 - Microsoft Security, Compliance, and Identity Fundamentals — SC-900
-- Salesforce Administrator
 - TryHackMe Pre Security (SEC0) — issued March 2026; expires March 2029
 
 **Completed courses:**
